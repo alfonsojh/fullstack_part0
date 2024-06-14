@@ -1,0 +1,14 @@
+```mermaid
+sequenceDiagram
+participant Browser
+participant Server
+
+
+note right of Browser: "Initial Request"
+Browser->>Server: https://studies.cs.helsinki.fi/exampleapp/spa
+Server->>Browser: HTML, CSS, JavaScript files
+note right of Browser:"JavaScript execution"
+Browser->>Browser: Execute JavaScript code
+note right of Browser:"Data request"
+Browser->>Server: GET /notes (load notes data)
+Server->>Browser: Notes data (JSON)
