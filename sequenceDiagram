@@ -1,0 +1,14 @@
+```mermaid
+sequenceDiagram
+    
+    participant Browser
+    participant Server 
+
+    note right of Browser: "Open web page"
+    Browser->>Server: open https://studies.cs.helsinki.fi/exampleapp/notes
+    Server->>Browser: HTML de la página de notas	
+    Browser->>Server: GET /exampleapp/notes
+    Server->>Browser: Success
+    note right of Browser: "Write new note"
+    Browser->>Server: Save new note
+    Server->>Browser: Success
